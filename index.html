@@ -63,7 +63,7 @@
   .tag{position:absolute;--tf:translate(-50%,-150%);transform:var(--tf);background:rgba(21,18,15,.95);border:3px solid var(--gold);color:var(--cream);padding:8px 18px;border-radius:12px;font:700 28px/1.2 var(--sans);white-space:nowrap}
   .tag.red{border-color:var(--red)} .tag.green{border-color:var(--green)}
   .tag.below{--tf:translate(-50%,45%)} .tag.right{--tf:translate(10%,-50%)} .tag.left{--tf:translate(-110%,-50%)}
-  .badge{position:absolute;--tf:translate(-50%,-50%);transform:var(--tf);width:54px;height:54px;border-radius:50%;background:var(--red);color:#fff;font:700 30px/54px var(--sans);text-align:center;border:4px solid var(--ink)}
+  .badge{position:absolute;--tf:translate(-50%,-50%);transform:var(--tf);width:54px;height:54px;border-radius:50%;background:var(--red);color:#fff;font:700 30px/46px var(--sans);text-align:center;border:4px solid var(--ink)}
   .badge.gold{background:var(--gold);color:var(--ink)} .badge.green{background:var(--green);color:var(--ink)} .badge.blue{background:var(--blue);color:var(--ink)}
   .badge.pulse::after{content:"";position:absolute;inset:-6px;border-radius:50%;border:4px solid var(--red);animation:pulse 1.6s ease-out infinite}
   @keyframes pulse{0%{transform:scale(.8);opacity:1}100%{transform:scale(2.6);opacity:0}}
@@ -75,7 +75,7 @@
   .ev.red figure img{border-color:var(--red)} .ev.blue figure img{border-color:var(--blue)} .ev.green figure img{border-color:var(--green)}
   .ev figure img.sq{border-radius:12px;width:130px;height:92px}
   .ev figcaption{font:700 26px/1.1 var(--sans);margin-top:6px;color:var(--cream)}
-  .ev .n{position:absolute;left:6px;top:-6px;width:40px;height:40px;border-radius:50%;background:var(--gold);color:var(--ink);font:700 26px/40px var(--sans);text-align:center;border:3px solid var(--card)}
+  .ev .n{position:absolute;left:6px;top:-6px;width:40px;height:40px;border-radius:50%;background:var(--gold);color:var(--ink);font:700 26px/34px var(--sans);text-align:center;border:3px solid var(--card)}
   .ev.red .n{background:var(--red);color:#fff} .ev.blue .n{background:var(--blue)} .ev.green .n{background:var(--green)}
   .ev .t{min-width:0;flex:1} .ev .t b{display:block;font:700 30px/1.15 var(--sans)} .ev .t span{display:block;font:400 26px/1.25 var(--sans);color:var(--muted);margin-top:4px}
   .ev.hero{background:#3a3222;border-color:var(--gold);padding:18px 22px} .ev.hero .t b{font:700 32px/1.2 var(--serif);color:var(--gold)}
@@ -108,6 +108,7 @@
   .tree .edge.red{stroke:var(--red)} .tree .edge.gold{stroke:var(--gold)} .tree .edge.grey{stroke:#6b6258}
   .tree .node{fill:var(--card);stroke:#6b6258;stroke-width:4}
   .tree .node.red{stroke:var(--red)} .tree .node.gold{stroke:var(--gold);fill:#3a3222}
+  .tree .frag{transition:none;transform:none}
 
   /* charts */
   .barrow{display:flex;align-items:center;gap:24px;margin:16px 0}
@@ -120,8 +121,8 @@
   .days.on i{animation:fillred .02s linear forwards}
   .days i.pay{background:var(--gold) !important;animation:none !important}
   @keyframes fillred{to{background:#8a3a30}}
-  .vchart{display:flex;align-items:flex-end;gap:40px;height:300px}
-  .vchart .vb{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%}
+  .vchart{display:flex;align-items:flex-end;gap:40px;height:320px}
+  .vchart .vb{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:320px}
   .vchart .vbar{width:100%;border-radius:12px 12px 0 0;background:var(--blue);height:0;transition:height 1.4s cubic-bezier(.2,.8,.2,1)}
   .vchart .vbar.red{background:var(--red)}
   .frag.on .vchart .vbar{height:var(--h)}
@@ -197,8 +198,8 @@
       <div class="key"><div class="kt">1914</div><div class="kr"><i class="sw" style="background:#afa239"></i>Triple Alliance</div><div class="kr"><i class="sw" style="background:#82bd59"></i>Triple Entente</div><div class="kr"><i class="sw" style="background:#f4e2ba"></i>Neutral</div></div>
       <svg class="overlay" viewBox="0 0 1000 592" preserveAspectRatio="none">
         <defs><marker id="ahr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#e0584a"/></marker></defs>
-        <g class="frag fade" data-step="1"><path class="arrow red" d="M505 290 Q 525 345 536 398" marker-end="url(#ahr)"/></g>
-        <g class="frag fade" data-step="2"><path class="arrow red" d="M625 73 Q 580 160 510 282" marker-end="url(#ahr)"/></g>
+        <g class="frag fade" data-step="1"><path class="arrow red" d="M516 328 Q 528 355 533 384" marker-end="url(#ahr)"/></g>
+        <g class="frag fade" data-step="2"><path class="arrow red" d="M612 98 Q 575 170 528 250" marker-end="url(#ahr)"/></g>
       </svg>
       <div class="badge frag fade" data-step="1" style="left:50.5%;top:49%">1</div>
       <div class="pin red frag fade" data-step="1" style="left:53.9%;top:67.7%"></div>
@@ -300,14 +301,14 @@
       <svg class="overlay" viewBox="0 0 1000 592" preserveAspectRatio="none">
         <defs><marker id="ahg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#e2b45c"/></marker><marker id="ahgr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#7fae6a"/></marker></defs>
         <g class="frag fade" data-step="2">
-          <path d="M725 345 Q 710 400 696 456 Q 680 500 640 530" class="arrow blue dash"/>
-          <circle class="dot" r="7" fill="#6fa7c7" style="offset-path:path('M725 345 Q 710 400 696 456 Q 680 500 640 530')"/>
-          <circle class="dot" r="7" fill="#6fa7c7" style="offset-path:path('M725 345 Q 710 400 696 456 Q 680 500 640 530')"/>
-          <circle class="dot" r="7" fill="#6fa7c7" style="offset-path:path('M725 345 Q 710 400 696 456 Q 680 500 640 530')"/>
-          <circle class="dot" r="7" fill="#6fa7c7" style="offset-path:path('M725 345 Q 710 400 696 456 Q 680 500 640 530')"/>
+          <path d="M725 345 Q 710 400 696 456 Q 678 493 624 500" class="arrow blue dash"/>
+          <circle class="dot" r="7" fill="#6fa7c7" style="offset-path:path('M725 345 Q 710 400 696 456 Q 678 493 624 500')"/>
+          <circle class="dot" r="7" fill="#6fa7c7" style="offset-path:path('M725 345 Q 710 400 696 456 Q 678 493 624 500')"/>
+          <circle class="dot" r="7" fill="#6fa7c7" style="offset-path:path('M725 345 Q 710 400 696 456 Q 678 493 624 500')"/>
+          <circle class="dot" r="7" fill="#6fa7c7" style="offset-path:path('M725 345 Q 710 400 696 456 Q 678 493 624 500')"/>
         </g>
-        <g class="frag fade" data-step="3"><path class="arrow green" d="M262 262 Q 440 60 622 73" marker-end="url(#ahgr)"/></g>
-        <g class="frag fade" data-step="4"><path class="arrow" d="M460 184 Q 545 90 622 75" marker-end="url(#ahg)"/></g>
+        <g class="frag fade" data-step="3"><path class="arrow green" d="M268 240 Q 440 60 612 70" marker-end="url(#ahgr)"/></g>
+        <g class="frag fade" data-step="4"><path class="arrow" d="M486 154 Q 545 90 610 80" marker-end="url(#ahg)"/></g>
       </svg>
       <div class="badge gold frag fade" data-step="1" style="left:53.9%;top:67.7%">1</div>
       <div class="badge blue frag fade" data-step="2" style="left:69.6%;top:77%">2</div>
@@ -342,9 +343,9 @@
       </div>
       <div class="card glass frag col" data-step="2" style="display:flex;flex-direction:column">
         <div class="lead sm">Black Sea exports, million roubles</div>
-        <div class="vchart" style="margin-top:14px;flex:1">
-          <div class="vb"><div class="vv">568</div><div class="vbar" style="--h:100%"></div><div class="vl">1911</div></div>
-          <div class="vb"><div class="vv red">433</div><div class="vbar red" style="--h:76%"></div><div class="vl">1912 · <span class="red">Straits closed</span></div></div>
+        <div class="vchart" style="margin-top:14px">
+          <div class="vb"><div class="vv">568</div><div class="vbar" style="--h:220px"></div><div class="vl">1911</div></div>
+          <div class="vb"><div class="vv red">433</div><div class="vbar red" style="--h:168px"></div><div class="vl">1912 · <span class="red">Straits closed</span></div></div>
         </div>
       </div>
     </div>
@@ -455,7 +456,7 @@
     <div class="kicker">"Talk is cheap. Commitments are expensive."</div>
     <h2>Expensive for Germany to break.</h2>
     <div class="inst frag" data-step="1" id="inst">
-      <div class="yr"><div class="blk">paid on signature</div><div class="y">Year 1</div></div>
+      <div class="yr"><div class="blk">Paid on signature</div><div class="y">Year 1</div></div>
       <div class="yr"><div class="blk"></div><div class="y">Year 2</div></div>
       <div class="yr"><div class="blk"></div><div class="y">Year 3</div></div>
       <div class="yr"><div class="blk"></div><div class="y">Year 4</div></div>
@@ -480,10 +481,10 @@
       <svg class="overlay" viewBox="0 0 1000 592" preserveAspectRatio="none">
         <defs><marker id="ahr3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#e0584a"/></marker></defs>
         <g class="chain">
-          <g class="frag fade" data-step="1"><path class="arrow red broken" d="M625 73 Q 580 160 510 282" marker-end="url(#ahr3)"/></g>
-          <g class="frag fade" data-step="2"><path class="arrow red broken" d="M262 262 Q 330 255 400 232" marker-end="url(#ahr3)"/></g>
-          <g class="frag fade" data-step="3"><path class="arrow red broken" d="M455 188 Q 380 205 300 225" marker-end="url(#ahr3)"/></g>
-          <g class="frag fade" data-step="4"><path class="arrow red broken" d="M232 176 Q 262 198 290 222" marker-end="url(#ahr3)"/></g>
+          <g class="frag fade" data-step="1"><path class="arrow red broken" d="M612 98 Q 575 170 512 278" marker-end="url(#ahr3)"/></g>
+          <g class="frag fade" data-step="2"><path class="arrow red broken" d="M300 256 Q 350 248 420 218" marker-end="url(#ahr3)"/></g>
+          <g class="frag fade" data-step="3"><path class="arrow red broken" d="M420 196 Q 370 208 308 220" marker-end="url(#ahr3)"/></g>
+          <g class="frag fade" data-step="4"><path class="arrow red broken" d="M252 192 Q 265 205 280 216" marker-end="url(#ahr3)"/></g>
           <g class="frag fade" data-step="5"><path class="cross" d="M540 150 L 600 210 M600 150 L 540 210"/></g>
         </g>
       </svg>
@@ -492,7 +493,6 @@
       <div class="badge frag fade" data-step="3" style="left:46%;top:31%">3</div>
       <div class="badge frag fade" data-step="4" style="left:23.2%;top:29.7%">4</div>
       <div class="pin red frag fade" data-step="3" style="left:29.3%;top:38%"></div>
-      <div class="tag red frag right" data-step="3" style="left:30%;top:38%">Belgium</div>
     </div>
     <div class="story">
       <div class="ev red frag" data-step="1"><figure><img src="assets/faces/nicholas.jpg" alt=""><div class="n">1</div><figcaption>Nicholas II</figcaption></figure><div class="t"><b>Russia attacks Austria</b><span>Tsar of Russia</span></div></div>
