@@ -184,6 +184,12 @@
   .zone .z{flex:1;background:var(--card);border-radius:16px;padding:16px 24px}
   .zone .z.on{border:3px solid var(--gold)}
   .zone .mid{flex:none;display:flex;align-items:center;font:700 30px/1 var(--sans);color:var(--gold);white-space:nowrap}
+  .tl.dense .evt{width:260px}
+  .tl.dense .evt .pic{width:110px;height:110px}
+  .tl.dense .evt .pic.sq{width:170px;height:110px}
+  .tl.dense .evt .t{font-size:26px}
+  .tl.dense .evt .y{font-size:34px}
+  .final{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;justify-content:center;padding:64px 90px 110px;background:#15120f linear-gradient(rgba(21,18,15,.78),rgba(21,18,15,.86)),url(assets/belgrade.jpg) center/cover no-repeat}
 </style>
 </head>
 <body>
@@ -268,12 +274,12 @@
   <div class="footer"><span>Clark, <i>The Sleepwalkers</i> · Otte, <i>July Crisis</i></span><span class="pg"></span></div>
 </section>
 
-<!-- 4 ENTRY GAME -->
+<!-- 4 ENTRY GAME + THREE CONCEPTS -->
 <section class="slide" data-section="Concept 1">
-  <div class="kicker">Concept 1 of 3 · the entry game</div>
+  <div class="kicker">One player · one mechanism · three concepts</div>
   <h2>Pay the entrant before you commit</h2>
   <div class="row" style="flex:1;align-items:center;gap:60px">
-    <svg class="tree" viewBox="40 40 720 480" style="width:820px;height:560px;flex:none">
+    <svg class="tree" viewBox="40 40 720 480" style="width:700px;height:470px;flex:none">
       <g class="frag fade" data-step="1">
         <path class="edge grey" d="M150 280 L 400 120"/>
         <rect class="node" x="400" y="80" width="300" height="80" rx="16"/><text x="550" y="130" text-anchor="middle" font-size="30">Entrant stays out</text>
@@ -295,38 +301,15 @@
       <div class="card accent frag" data-step="3" style="background:#3a3222"><div class="lead sm gold">3 · Pay Russia not to play</div><p class="muted">Before 5 July. The cheque is never written.</p></div>
     </div>
   </div>
-  <div class="footer"><span>Concept 1 of 3 · the entry game</span><span class="pg"></span></div>
-</section>
-
-<!-- 5 THREE CONCEPTS -->
-<section class="slide" data-section="The task">
-  <div class="kicker">One player · one mechanism</div>
-  <h2>Germany, before 5 July.</h2>
-  <p class="lead sm" style="margin:-8px 0 22px">Pay Russia not to enter, instead of writing the blank cheque. Three concepts test the offer.</p>
-  <div class="row" style="flex:1;align-items:stretch">
-    <div class="card accent frag col" data-step="1" style="display:flex;flex-direction:column;justify-content:space-around;align-items:center;text-align:center;padding-top:36px">
-      <div class="kicker">Concept 1</div>
-      <div class="num">1</div><h3 style="font-size:46px">Entry game</h3>
-      <p class="muted">What Russia must be paid to stay out.</p>
-      <div class="person lg v"><img src="assets/faces/nicholas.jpg" alt=""><div><div class="who">Nicholas II</div><div class="role">Tsar of Russia</div></div></div>
-    </div>
-    <div class="card accent frag col" data-step="2" style="display:flex;flex-direction:column;justify-content:space-around;align-items:center;text-align:center;padding-top:36px">
-      <div class="kicker">Concept 2</div>
-      <div class="num">2</div><h3 style="font-size:46px">Reservation prices</h3>
-      <p class="muted">A payment inside both sides' limits.</p>
-      <div class="person lg v"><img src="assets/faces/bethmann.jpg" alt=""><div><div class="who">Bethmann Hollweg</div><div class="role">German Chancellor</div></div></div>
-    </div>
-    <div class="card accent frag col" data-step="3" style="display:flex;flex-direction:column;justify-content:space-around;align-items:center;text-align:center;padding-top:36px">
-      <div class="kicker">Concept 3</div>
-      <div class="num">3</div><h3 style="font-size:46px">Costly commitment</h3>
-      <p class="muted">Why Russia can believe the offer.</p>
-      <div class="person lg v"><img src="assets/juliusturm.jpg" alt="" style="object-position:center 20%"><div><div class="who">The Juliusturm, Spandau</div><div class="role">Germany's gold war chest</div></div></div>
-    </div>
+  <div class="row frag" data-step="4" style="gap:28px;margin-top:6px">
+    <div class="card col accent" style="padding:18px 28px;background:#3a3222"><div class="kicker" style="margin-bottom:6px">Concept 1 · this slide</div><div class="lead sm">Entry game</div><p class="muted">What Russia must be paid to stay out</p></div>
+    <div class="card col accent" style="padding:18px 28px"><div class="kicker" style="margin-bottom:6px">Concept 2</div><div class="lead sm">Reservation prices</div><p class="muted">A price inside both sides' limits</p></div>
+    <div class="card col accent" style="padding:18px 28px"><div class="kicker" style="margin-bottom:6px">Concept 3</div><div class="lead sm">Costly commitment</div><p class="muted">Why Russia can believe the offer</p></div>
   </div>
   <div class="footer"><span>Player: Germany · Aim: a lower chance of a European war</span><span class="pg"></span></div>
 </section>
 
-<!-- 6 MAP WANTS -->
+<!-- 5 MAP WANTS -->
 <section class="slide" data-section="What Russia wanted">
   <h2>What did Russia want?</h2>
   <div class="mapwrap">
@@ -354,7 +337,7 @@
     </div>
     <div class="story">
       <div class="ev frag" data-step="1"><figure><img src="assets/faces/wilhelm.jpg" alt=""><div class="n">1</div><figcaption>Wilhelm II</figcaption></figure><div class="t"><b>Serbia alive. No land taken.</b><span>Written before 5 July. The Kaiser says it only on 28 July.</span></div></div>
-      <div class="ev blue frag" data-step="2"><figure><img class="sq" src="assets/bosphorus.jpg" alt=""><div class="n">2</div><figcaption>The Straits</figcaption></figure><div class="t"><b>The Straits stay open</b><span>Russia's grain leaves through Constantinople</span></div></div>
+      <div class="ev blue frag" data-step="2"><figure><img class="sq" src="assets/bosphorus.jpg" alt=""><div class="n">2</div><figcaption>The Straits</figcaption></figure><div class="t"><b>The Straits stay open</b><span>Russia's grain leaves here. No German command.</span></div></div>
       <div class="ev green frag" data-step="3"><figure><img src="assets/faces/poincare.jpg" alt=""><div class="n">3</div><figcaption>Poincaré</figcaption></figure><div class="t"><b>France lends 500m francs a year</b><span>President of France · 1913</span></div></div>
       <div class="ev frag" data-step="4"><figure><img src="assets/faces/bethmann.jpg" alt=""><div class="n">=</div><figcaption>Bethmann Hollweg</figcaption></figure><div class="t"><b>Germany pays the same</b><span>500m francs a year, for five years</span></div></div>
     </div>
@@ -362,87 +345,50 @@
   <div class="footer"><span>Clark · MacMillan · Gottlieb · Kokovtsov, <i>Out of My Past</i></span><span class="pg"></span></div>
 </section>
 
-<!-- 7 STRAITS -->
+<!-- 6 TWO PRICES: STRAITS + MONEY -->
 <section class="slide" data-section="What Russia wanted">
   <div class="photo" style="background-image:url(assets/bosphorus.jpg)"></div><div class="shade"></div>
   <div class="over">
-    <div class="kicker">2 · The Straits</div>
-    <h2>Russia's trade had one door.</h2>
-    <div class="row" style="align-items:stretch">
-      <div class="card glass frag col" data-step="1" style="display:flex;flex-direction:column">
-        <div class="lead sm">Share of Russian exports through the Straits</div>
-        <div style="display:flex;gap:40px;justify-content:center;align-items:center;flex:1;margin-top:14px">
-          <div class="donut"><svg viewBox="0 0 300 300"><circle class="bg" cx="150" cy="150" r="120"/><circle class="arc" cx="150" cy="150" r="120" style="--off:503"/></svg><div class="c">⅓<small>of all exports</small></div></div>
-          <div class="donut"><svg viewBox="0 0 300 300"><circle class="bg" cx="150" cy="150" r="120"/><circle class="arc" cx="150" cy="150" r="120" style="--off:151"/></svg><div class="c">80%<small>of grain</small></div></div>
+    <div class="kicker">2 · The Straits &nbsp;&nbsp;·&nbsp;&nbsp; 3 · Money</div>
+    <h2>Two prices Russia already knew.</h2>
+    <div class="row" style="flex:1;align-items:stretch;gap:30px">
+      <div class="card glass col" style="display:flex;flex-direction:column;border-top:12px solid var(--blue)">
+        <div class="frag" data-step="1" style="display:flex;flex-direction:column;flex:1">
+          <div class="lead sm">Russia's exports through the Straits</div>
+          <div style="display:flex;gap:30px;justify-content:center;align-items:center;flex:1;margin-top:10px">
+            <div class="donut" style="width:260px;height:260px"><svg viewBox="0 0 300 300"><circle class="bg" cx="150" cy="150" r="120"/><circle class="arc" cx="150" cy="150" r="120" style="--off:503"/></svg><div class="c">⅓<small>of all exports</small></div></div>
+            <div class="donut" style="width:260px;height:260px"><svg viewBox="0 0 300 300"><circle class="bg" cx="150" cy="150" r="120"/><circle class="arc" cx="150" cy="150" r="120" style="--off:151"/></svg><div class="c">80%<small>of grain</small></div></div>
+          </div>
+        </div>
+        <div class="frag" data-step="2" style="display:flex;align-items:center;gap:22px;margin-top:14px;background:rgba(21,18,15,.5);border-radius:14px;padding:14px 22px">
+          <div class="num red" style="font-size:60px;flex:none">−24%</div>
+          <div><b style="display:block;font:700 30px/1.15 var(--sans)">1912: Turkey closes the Straits</b><span class="muted" style="display:block;font-size:26px;margin-top:4px">Black Sea exports fall from 568 to 433 million roubles in one year</span></div>
         </div>
       </div>
-      <div class="card glass frag col" data-step="2" style="display:flex;flex-direction:column">
-        <div class="lead sm">Black Sea exports, million roubles</div>
-        <div class="vchart" style="margin-top:14px">
-          <div class="vb"><div class="vv">568</div><div class="vbar" style="--h:220px"></div><div class="vl">1911</div></div>
-          <div class="vb"><div class="vv red">433</div><div class="vbar red" style="--h:168px"></div><div class="vl">1912 · <span class="red">Straits closed</span></div></div>
+      <div class="card glass col" style="display:flex;flex-direction:column;border-top:12px solid var(--gold)">
+        <div class="lead sm">France's number. Condition reversed.</div>
+        <div class="row" style="flex:1;gap:20px;margin-top:12px;align-items:stretch">
+          <div class="card col frag" data-step="3" style="border-top:10px solid var(--green);text-align:center;padding:16px 18px;background:rgba(21,18,15,.55)">
+            <div class="kicker green" style="margin-bottom:8px">France · 1913</div>
+            <div class="frame" style="height:120px;border-color:var(--green)"><img src="assets/bourse.jpg" alt="" style="object-position:center 30%"></div>
+            <div class="num" style="font-size:54px;margin-top:10px">500m francs</div><p class="muted" style="font-size:26px">a year, for five years</p>
+            <div class="lead sm" style="margin-top:8px;font-size:30px">Build railways <span class="green">toward Germany</span></div>
+          </div>
+          <div class="card col frag" data-step="4" style="border-top:10px solid var(--gold);text-align:center;padding:16px 18px;background:rgba(58,50,34,.96)">
+            <div class="kicker" style="margin-bottom:8px">Germany's offer</div>
+            <div class="frame" style="height:120px"><img src="assets/railway.jpg" alt="" style="object-position:center 40%"></div>
+            <div class="num" style="font-size:54px;margin-top:10px">500m francs</div><p class="muted" style="font-size:26px">a year, for five years</p>
+            <div class="lead sm" style="margin-top:8px;font-size:30px">Don't use them. <span class="gold">Paid while Russia stays out.</span></div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="row frag" data-step="3" style="margin-top:30px;align-items:center;gap:30px">
-      <div class="person lg"><img src="assets/faces/liman.jpg" alt=""><div><div class="who">Liman von Sanders</div><div class="role">German general, Constantinople</div></div></div>
-      <div class="card accent glass" style="flex:1"><div class="lead sm">Jan 1914: he takes command at the Straits. Russia talks of war. <span class="gold">Germany backs down.</span></div><p class="muted" style="margin-top:6px">Before 5 July, Germany makes that permanent: no German command at the Straits.</p></div>
-    </div>
   </div>
-  <div class="footer"><span>Gottlieb, <i>Studies in Secret Diplomacy</i> · Siebert, ch. 17</span><span class="pg"></span></div>
+  <div class="footer"><span>Gottlieb · Siebert, ch. 17 · Kokovtsov, <i>Out of My Past</i> · DDF 3rd series, vol. VIII</span><span class="pg"></span></div>
 </section>
 
-<!-- 8 LOAN -->
-<section class="slide" data-section="What Russia wanted">
-  <div class="photo" style="background-image:url(assets/railway.jpg)"></div><div class="shade"></div>
-  <div class="over">
-    <div class="kicker">3 · Money</div>
-    <h2>France's number. Condition reversed.</h2>
-    <div class="row" style="align-items:stretch">
-      <div class="card col glass frag" data-step="1" style="border-top:12px solid var(--green);text-align:center;padding:24px 34px">
-        <div class="kicker green">France · 1913</div>
-        <div class="frame" style="height:160px;border-color:var(--green)"><img src="assets/bourse.jpg" alt="" style="object-position:center 30%"></div>
-        <div class="cap">The Paris Bourse</div>
-        <div class="num" style="font-size:72px;margin-top:10px">500m francs</div><p class="muted">a year, for five years</p>
-        <div class="lead sm" style="margin-top:12px">Build railways <span class="green">toward Germany</span></div>
-      </div>
-      <div class="frag" data-step="2" style="display:flex;align-items:center;font:700 110px/1 var(--serif);color:var(--gold)">→</div>
-      <div class="card col frag" data-step="2" style="background:rgba(58,50,34,.96);border-top:12px solid var(--gold);text-align:center;padding:24px 34px">
-        <div class="kicker">Germany · before 5 July</div>
-        <div class="frame" style="height:160px"><img src="assets/railway.jpg" alt="" style="object-position:center 40%"></div>
-        <div class="cap">Russian railway, c.1910</div>
-        <div class="num" style="font-size:72px;margin-top:10px">500m francs</div><p class="muted">a year, for five years</p>
-        <div class="lead sm" style="margin-top:12px">Don't use them. <span class="gold">Paid only while Russia stays out.</span></div>
-      </div>
-    </div>
-    <div class="row frag" data-step="3" style="margin-top:24px;align-items:center;gap:30px">
-      <div class="person"><img src="assets/faces/kokovtsov.jpg" alt=""><div><div class="who">Kokovtsov</div><div class="role">Russian finance minister</div></div></div>
-      <div class="card accent glass" style="flex:1;padding:16px 30px"><div class="lead sm">Russia gives one thing: <span class="gold">it does not enter.</span> <span class="muted" style="font-weight:400">Russia keeps France.</span></div></div>
-    </div>
-  </div>
-  <div class="footer"><span>Kokovtsov, <i>Out of My Past</i> · DDF 3rd series, vol. VIII</span><span class="pg"></span></div>
-</section>
-
-<!-- 9 SMALL DEALS -->
-<section class="slide" data-section="What Russia wanted">
-  <h2>Small deals worked. The big one failed.</h2>
-  <div class="tl" style="margin-bottom:20px">
-    <div class="line"></div>
-    <div class="evt bad up frag" data-step="1" style="left:14%"><img class="pic sq" src="assets/bjorko.jpg" alt=""><div class="y">1905</div><div class="t">Björkö: "leave France"</div><div class="mark red">✗</div></div>
-    <div class="evt down frag" data-step="2" style="left:38%"><div class="mark green">✓</div><div class="y">1911</div><div class="t">Potsdam: Persia for the Baghdad Railway</div><img class="pic" src="assets/kaisers.jpg" alt="" style="object-position:top;margin-top:12px"></div>
-    <div class="evt up frag" data-step="3" style="left:62%"><img class="pic" src="assets/faces/liman.jpg" alt=""><div class="y">Jan 1914</div><div class="t">Liman: Germany backs down</div><div class="mark green">✓</div></div>
-    <div class="evt down frag" data-step="4" style="left:86%"><div class="mark green">✓</div><div class="y">Feb 1914</div><div class="t">Armenian reforms: compromise signed</div><img class="pic" src="assets/faces/sazonov.jpg" alt="" style="margin-top:12px"></div>
-    <div class="d frag fade" data-step="1" style="position:absolute;left:14%;top:50%;--tf:translate(-50%,-50%);transform:translate(-50%,-50%);background:var(--red)"></div>
-    <div class="d frag fade" data-step="2" style="position:absolute;left:38%;top:50%;--tf:translate(-50%,-50%);transform:translate(-50%,-50%)"></div>
-    <div class="d frag fade" data-step="3" style="position:absolute;left:62%;top:50%;--tf:translate(-50%,-50%);transform:translate(-50%,-50%)"></div>
-    <div class="d frag fade" data-step="4" style="position:absolute;left:86%;top:50%;--tf:translate(-50%,-50%);transform:translate(-50%,-50%)"></div>
-  </div>
-  <div class="card accent frag" data-step="5" style="background:#3a3222;text-align:center;padding:18px"><div class="lead">Three yeses before July. <span class="gold">A small deal, offered before the cheque.</span></div></div>
-  <div class="footer"><span>Treaty of Björkö, 1905 · Potsdam Agreement, 1911 · Siebert · Kieser et al. (2015)</span><span class="pg"></span></div>
-</section>
-
-<!-- 10 LOSS FRAME -->
-<section class="slide" data-section="The price test">
+<!-- 7 LOSS FRAME -->
+<section class="slide" data-section="Why Russia says yes">
   <div class="kicker">Why Russia says yes · framing</div>
   <h2>The cheque is a loss. The payment is a gain.</h2>
   <div class="row" style="flex:1">
@@ -467,7 +413,7 @@
   <div class="footer"><span>Tversky &amp; Kahneman (1981) · Clark · Otte</span><span class="pg"></span></div>
 </section>
 
-<!-- 11 PRICE TEST -->
+<!-- 8 PRICE TEST -->
 <section class="slide" data-section="Concept 2">
   <div class="kicker">Concept 2 of 3 · reservation prices</div>
   <h2>The price sits in the gap.</h2>
@@ -489,7 +435,7 @@
   <div class="footer"><span>Wehrbeitragsgesetz 1913 · Chickering · Bogart in Broadberry &amp; Harrison · Ferguson, <i>The Pity of War</i></span><span class="pg"></span></div>
 </section>
 
-<!-- 12 CREDIBILITY -->
+<!-- 9 CREDIBILITY -->
 <section class="slide" data-section="Concept 3">
   <div class="photo dark" style="background-image:url(assets/spandau.jpg)"></div><div class="shade"></div>
   <div class="over">
@@ -511,7 +457,7 @@
   <div class="footer"><span>Neitzel (war chest) · Photo: Spandau Citadel</span><span class="pg"></span></div>
 </section>
 
-<!-- 13 CHAIN -->
+<!-- 10 CHAIN -->
 <section class="slide" data-section="Concept 3">
   <h2>The chain breaks at the cheque.</h2>
   <div class="mapwrap">
@@ -545,46 +491,56 @@
   <div class="footer"><span>Ferguson, <i>The Pity of War</i> · Clark · Treaty of London, 1839</span><span class="pg"></span></div>
 </section>
 
-<!-- 14 FAILS -->
-<section class="slide" data-section="Concept 3">
-  <h2>Four ways it fails.</h2>
-  <div class="row" style="flex:1;gap:28px">
-    <div class="card accent red col frag" data-step="1" style="text-align:center;padding-top:40px"><div class="person lg v red"><img src="assets/faces/conrad.jpg" alt=""><div><div class="who">Conrad</div><div class="role">Austrian chief of staff</div></div></div><h3 style="margin-top:22px">Conrad demands the cheque</h3><p class="muted">Then Germany must really refuse it.</p></div>
-    <div class="card accent red col frag" data-step="2" style="text-align:center;padding-top:40px"><div class="person lg v red"><img src="assets/faces/sazonov.jpg" alt=""><div><div class="who">Sazonov</div><div class="role">Russian foreign minister</div></div></div><h3 style="margin-top:22px">Russia fights anyway</h3><p class="muted">Germany refused a cheque, not a war.</p></div>
-    <div class="card accent red col frag" data-step="3" style="text-align:center;padding-top:40px"><div class="person lg v red"><img src="assets/faces/moltke.jpg" alt=""><div><div class="who">Moltke</div><div class="role">German chief of staff</div></div></div><h3 style="margin-top:22px">Russia stays armed</h3><p class="muted">The payments stop if Russia attacks.</p></div>
-    <div class="card accent red col frag" data-step="4" style="text-align:center;padding-top:40px"><div class="person lg v red"><img src="assets/faces/nicholas.jpg" alt=""><div><div class="who">Nicholas II</div><div class="role">Tsar of Russia</div></div></div><h3 style="margin-top:22px">Can't buy Russia out of France</h3><p class="muted">Björkö proved it. This offer does not try.</p></div>
-  </div>
-  <div class="footer"><span>Clark · Otte · Mombauer, <i>Helmuth von Moltke</i></span><span class="pg"></span></div>
-</section>
-
-<!-- 15 STICK / CARROT -->
+<!-- 11 STICK / CARROTS -->
 <section class="slide" data-section="Novelty">
   <div class="kicker">Why this is new</div>
-  <h2>Twice the stick. Never the carrot.</h2>
-  <div class="row" style="flex:1;align-items:center;gap:50px">
-    <div class="person lg v frag" data-step="1" style="flex:none"><img src="assets/faces/bismarck.jpg" alt=""><div><div class="who">Bismarck</div><div class="role">German Chancellor, 1887</div></div></div>
-    <div class="tl col" style="height:440px">
-      <div class="line"></div>
-      <div class="evt bad up frag" data-step="1" style="left:16%"><div class="y">1887</div><div class="t">Berlin banks closed to Russia</div><div class="mark red">✗</div></div>
-      <div class="evt bad down frag" data-step="2" style="left:50%"><div class="mark red">✗</div><div class="y">1906</div><div class="t">Loan refused</div></div>
-      <div class="evt gold up frag" data-step="3" style="left:84%"><div class="donut" style="width:240px;height:240px"><svg viewBox="0 0 300 300"><circle class="bg" cx="150" cy="150" r="120"/><circle class="arc" cx="150" cy="150" r="120" style="--off:151"/></svg><div class="c" style="font-size:54px">80%<small>France</small></div></div><div class="y">1914</div><div class="t">of Russia's foreign debt is held in Paris</div></div>
+  <h2>The stick failed. Small carrots worked.</h2>
+  <div class="row" style="flex:1;gap:28px;align-items:stretch">
+    <div class="card accent red col frag" data-step="1" style="text-align:center;padding:28px 24px">
+      <div class="person lg v red"><img src="assets/faces/bismarck.jpg" alt=""><div><div class="who">Bismarck</div><div class="role">German Chancellor</div></div></div>
+      <h3 style="margin-top:18px">Twice the stick</h3>
+      <p class="muted">1887: Berlin banks closed.<br>1906: Russia's biggest loan refused.</p>
+    </div>
+    <div class="card accent red col frag" data-step="2" style="text-align:center;padding:28px 24px">
+      <div class="frame" style="height:170px;margin:0 auto;width:240px"><img src="assets/bjorko.jpg" alt=""></div>
+      <div class="cap">Treaty of Björkö</div>
+      <h3 style="margin-top:12px">The big carrot failed</h3>
+      <p class="muted">1905: "Leave France." Too big. France was Russia's banker.</p>
+    </div>
+    <div class="card accent green col frag" data-step="3" style="text-align:center;padding:28px 24px">
+      <div class="person lg v green"><img src="assets/faces/liman.jpg" alt=""><div><div class="who">Liman von Sanders</div><div class="role">German general, Constantinople</div></div></div>
+      <h3 style="margin-top:18px">Three small yeses</h3>
+      <p class="muted">1911 Potsdam · Jan 1914 Straits · Feb 1914 Armenia</p>
+    </div>
+    <div class="card col frag" data-step="4" style="text-align:center;padding:28px 24px;background:#3a3222;border-left:10px solid var(--gold)">
+      <div class="donut" style="width:220px;height:220px;margin:0 auto"><svg viewBox="0 0 300 300"><circle class="bg" cx="150" cy="150" r="120"/><circle class="arc" cx="150" cy="150" r="120" style="--off:151"/></svg><div class="c" style="font-size:54px">80%<small>France</small></div></div>
+      <h3 style="margin-top:12px">By 1914</h3>
+      <p class="muted">of Russia's foreign debt is held in Paris</p>
     </div>
   </div>
-  <div class="card accent frag" data-step="4" style="background:#3a3222;text-align:center;padding:18px"><div class="lead">The carrot was never offered. <span class="gold">The week before 5 July was never used.</span></div></div>
-  <div class="footer"><span>Girault, <i>Emprunts russes</i> · Siegel, <i>For Peace and Money</i> · Ananich (1906 loan)</span><span class="pg"></span></div>
+  <div class="card accent frag" data-step="5" style="background:#3a3222;text-align:center;padding:18px;margin-top:22px"><div class="lead">Ours is a small deal, the kind that worked. <span class="gold">Offered in the week nobody used.</span></div></div>
+  <div class="footer"><span>Girault · Siegel, <i>For Peace and Money</i> · Ananich · Treaty of Björkö · Potsdam Agreement · Siebert</span><span class="pg"></span></div>
 </section>
 
-<!-- 16 CLOSE -->
+<!-- 12 FAILS + CLOSE -->
 <section class="slide" data-section="Close">
   <div class="photo dark" style="background-image:url(assets/belgrade.jpg)"></div><div class="shade"></div>
-  <div class="over" style="justify-content:center">
-    <div class="kicker">Germany · before 5 July 1914</div>
-    <h1 style="font-size:92px">Pay Russia not to enter.<br><span class="gold">Leave 5 July unsigned.</span></h1>
-    <p class="lead" style="margin-top:22px">Entry game · Reservation prices · Costly commitment</p>
-    <p class="muted" style="margin-top:50px;font-size:26px;max-width:1640px">Sources: Clark (2012) · Otte (2014) · MacMillan (2013) · Ferguson (1998) · Kokovtsov · Gottlieb · Siegel · Girault · Ananich · Neitzel · Chickering · Broadberry &amp; Harrison · Tversky &amp; Kahneman (1981).</p>
-    <p class="muted" style="margin-top:18px;font-size:26px;max-width:1640px">Images: Wikimedia Commons, Library of Congress, BnF and Bundesarchiv. Public domain except: map (CC BY-SA 2.5), Kaiser and Tsar photo (Bundesarchiv, CC BY-SA 3.0 de), Björkö treaty (CC BY-SA 4.0), Spandau Citadel (CC BY-SA 4.0), Juliusturm (CC BY-SA 2.0), Paris Bourse (CC0).</p>
+  <div class="over">
+    <div class="kicker">Before the last word</div>
+    <h2>Four ways it fails.</h2>
+    <div class="row" style="flex:1;gap:28px;align-items:stretch">
+      <div class="card glass col frag" data-step="1" style="text-align:center;padding-top:36px;border-top:10px solid var(--red)"><div class="person lg v red"><img src="assets/faces/conrad.jpg" alt=""><div><div class="who">Conrad</div><div class="role">Austrian chief of staff</div></div></div><h3 style="margin-top:22px">Conrad demands the cheque</h3><p class="muted">Then Germany must really refuse it.</p></div>
+      <div class="card glass col frag" data-step="2" style="text-align:center;padding-top:36px;border-top:10px solid var(--red)"><div class="person lg v red"><img src="assets/faces/sazonov.jpg" alt=""><div><div class="who">Sazonov</div><div class="role">Russian foreign minister</div></div></div><h3 style="margin-top:22px">Russia fights anyway</h3><p class="muted">Germany refused a cheque, not a war.</p></div>
+      <div class="card glass col frag" data-step="3" style="text-align:center;padding-top:36px;border-top:10px solid var(--red)"><div class="person lg v red"><img src="assets/faces/moltke.jpg" alt=""><div><div class="who">Moltke</div><div class="role">German chief of staff</div></div></div><h3 style="margin-top:22px">Russia stays armed</h3><p class="muted">The payments stop if Russia attacks.</p></div>
+      <div class="card glass col frag" data-step="4" style="text-align:center;padding-top:36px;border-top:10px solid var(--red)"><div class="person lg v red"><img src="assets/faces/nicholas.jpg" alt=""><div><div class="who">Nicholas II</div><div class="role">Tsar of Russia</div></div></div><h3 style="margin-top:22px">Can't buy Russia out of France</h3><p class="muted">Björkö proved it. This offer does not try.</p></div>
+    </div>
   </div>
-  <div class="footer"><span>Photo: Belgrade under Austrian bombardment, August 1914</span><span class="pg"></span></div>
+  <div class="final frag fade" data-step="5">
+    <div class="kicker">Germany · before 5 July 1914</div>
+    <h1 style="font-size:96px">Pay Russia not to enter.<br><span class="gold">Leave 5 July unsigned.</span></h1>
+    <p class="lead" style="margin-top:22px">Entry game · Reservation prices · Costly commitment</p>
+  </div>
+  <div class="footer" style="z-index:3"><span>Clark · Otte · MacMillan · Ferguson · Kokovtsov · Gottlieb · Siegel · Girault</span><span class="pg"></span></div>
 </section>
 
 <div class="progress" id="progress"></div>
