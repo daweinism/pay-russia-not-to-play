@@ -34,6 +34,14 @@
 
   .row{display:flex;gap:36px} .col{flex:1}
   .card{background:var(--card);border-radius:18px;padding:30px 34px;position:relative}
+  .card.yescard{flex:1.48;text-align:left;padding:20px 18px 16px;display:flex;flex-direction:column;gap:12px}
+  .yescard .person{align-items:center}
+  .yescard .person img{width:78px;height:78px;border-width:4px}
+  .deals{display:flex;flex-direction:column;gap:10px;flex:1;min-height:0}
+  .deal{background:#1f1a16;border-radius:14px;padding:12px 14px;flex:1;display:flex;flex-direction:column;justify-content:center}
+  .deal .when{font:700 26px/1.1 var(--sans);color:var(--gold);letter-spacing:.02em}
+  .deal .got{font:400 26px/1.25 var(--sans);color:var(--cream);margin-top:4px}
+  .deal .got b{font-weight:700;color:var(--gold)}
   .card.accent{border-left:10px solid var(--gold)} .card.accent.red{border-color:var(--red)} .card.accent.green{border-color:var(--green)}
   .big{font:700 150px/1 var(--serif);color:var(--gold)}
   .num{font:700 100px/1 var(--serif);color:var(--gold)}
@@ -514,10 +522,25 @@
       <h3 style="margin-top:12px">The big carrot failed</h3>
       <p class="muted">1905: "Leave France." Too big. France was Russia's banker.</p>
     </div>
-    <div class="card accent green col frag" data-step="3" style="text-align:center;padding:28px 24px">
-      <div class="person lg v green"><img src="assets/faces/liman.jpg" alt=""><div><div class="who">Liman von Sanders</div><div class="role">German general, Constantinople</div></div></div>
-      <h3 style="margin-top:18px">Three small yeses</h3>
-      <p class="muted">1911 Potsdam · Jan 1914 Straits · Feb 1914 Armenia</p>
+    <div class="card accent green col yescard frag" data-step="3">
+      <div class="person green"><img src="assets/faces/liman.jpg" alt=""><div><div class="who">Three small yeses</div><div class="role">France stays Russia's ally</div></div></div>
+      <div class="deals">
+        <div class="deal">
+          <div class="when">1911 · Potsdam</div>
+          <div class="got"><b>Russia</b> stops blocking the Baghdad railway.</div>
+          <div class="got"><b>Germany</b> stays out of northern Persia.</div>
+        </div>
+        <div class="deal">
+          <div class="when">Jan 1914 · Straits</div>
+          <div class="got"><b>Liman</b> leaves command at Constantinople.</div>
+          <div class="got"><b>No German general</b> commands the Straits.</div>
+        </div>
+        <div class="deal">
+          <div class="when">Feb 1914 · Armenia</div>
+          <div class="got"><b>Two inspectors</b> for Ottoman Armenia.</div>
+          <div class="got"><b>Russia</b> takes no land.</div>
+        </div>
+      </div>
     </div>
     <div class="card col frag" data-step="4" style="text-align:center;padding:28px 24px;background:#3a3222;border-left:10px solid var(--gold)">
       <div class="donut" style="width:220px;height:220px;margin:0 auto"><svg viewBox="0 0 300 300"><circle class="bg" cx="150" cy="150" r="120"/><circle class="arc" cx="150" cy="150" r="120" style="--off:151"/></svg><div class="c" style="font-size:54px">80%<small>France</small></div></div>
