@@ -189,6 +189,18 @@
   .term i{display:flex;align-items:center;justify-content:center;width:54px;height:54px;padding:0 0 3px;border-radius:50%;background:var(--gold);color:var(--ink);font:700 28px/1 var(--sans);text-align:center;flex:none;font-style:normal}
   .stamp{position:absolute;left:32px;right:32px;top:78px;height:300px;display:flex;align-items:center;justify-content:center;pointer-events:none}
   .stamp b{font:700 52px/1 var(--sans);letter-spacing:.08em;color:#fff;background:var(--red);border:6px solid #fff;padding:16px 22px;transform:rotate(-8deg)}
+  .shot{position:relative;margin-top:10px}
+  .shot .stamp{top:0;left:0;right:0;height:100%}
+  .stamp.cond b{font-size:34px;line-height:1.15;letter-spacing:.03em;text-align:center;padding:12px 14px}
+  .mx{display:grid;grid-template-columns:230px 1fr 1fr;grid-template-rows:118px 1fr 1fr;gap:14px;flex:1;min-height:0;margin-top:8px}
+  .mx .hd,.mx .rl{display:flex;align-items:center;justify-content:center;text-align:center;font:700 30px/1.2 var(--sans)}
+  .mx .hd.blank{color:var(--red)} .mx .hd.ours{color:var(--gold)}
+  .mx .rl{justify-content:flex-end;text-align:right;padding-right:8px;font-size:28px}
+  .mx .cell{border-radius:16px;background:#241f1b;display:flex;align-items:center;justify-content:center;text-align:center;padding:12px 18px}
+  .mx .cell b{display:block;font:700 34px/1.2 var(--serif)}
+  .mx .cell small{display:block;font:400 26px/1.3 var(--sans);color:var(--muted);margin-top:8px}
+  .mx .cell.war:has(.on){background:#4a2622} .mx .cell.war:has(.on) b{color:#fff} .mx .cell.war:has(.on) small{color:#f3ecdf}
+  .mx .cell.ours:has(.on){background:#3a3222;box-shadow:inset 0 0 0 4px var(--gold)} .mx .cell.ours:has(.on) b{color:var(--gold)}
   .zone{display:flex;align-items:stretch;gap:18px;margin-bottom:8px}
   .zone .z{flex:1;background:var(--card);border-radius:16px;padding:16px 24px}
   .zone .z.on{border:3px solid var(--gold)}
@@ -211,7 +223,7 @@
     <div class="col">
       <div class="kicker">SMBA6105 · Germany · before 5 July 1914</div>
       <h1 style="font-size:128px">Pay Russia<br><span class="gold">not to play.</span></h1>
-      <p class="lead" style="margin-top:28px">Instead of the blank cheque.</p>
+      <p class="lead" style="margin-top:28px">Condition the cheque. Pay Russia to wait.</p>
       <p class="muted" style="margin-top:28px;font-size:28px">Mathew Mao · Dawei Yang · Siyu Yang · Iris Zhang</p>
     </div>
     <div style="flex:none;width:560px">
@@ -256,7 +268,7 @@
 <!-- 3 THE OPEN WEEK -->
 <section class="slide" data-section="The mechanism">
   <div class="kicker">Germany's move · 28 June to 5 July</div>
-  <h2>Pay Russia while talks are open.</h2>
+  <h2 style="font-size:58px">Condition the cheque. Pay Russia to wait.</h2>
   <div class="choose">
     <div class="pane side">
       <div class="kicker">Still open</div>
@@ -266,18 +278,23 @@
       <div class="person" style="margin-top:auto"><img src="assets/faces/wilhelm.jpg" alt=""><div><div class="who">Wilhelm II</div><div class="role">Can still choose</div></div></div>
     </div>
     <div class="pane mid">
-      <div class="kicker">The offer</div>
-      <div class="lead">Germany pays Russia not to enter.</div>
-      <div class="term frag" data-step="1"><i>1</i><div><b>Serbia stays alive</b><span>No land taken</span></div></div>
+      <div class="kicker">To Russia · the payment</div>
+      <div class="lead">Pay Russia to wait.</div>
+      <div class="term frag" data-step="1"><i>1</i><div><b>Serbia stays independent</b><span>No land taken</span></div></div>
       <div class="term frag" data-step="1"><i>2</i><div><b>The Straits stay open</b><span>No German command there</span></div></div>
       <div class="term frag" data-step="1"><i>3</i><div><b>500 million francs a year</b><span>For five years, while Russia stays out</span></div></div>
     </div>
     <div class="pane side">
-      <div class="kicker">5 July</div>
-      <div class="frame" style="height:300px;margin-top:8px"><img src="assets/telegram.jpg" alt="" style="object-position:center"></div>
-      <div class="cap">Austria asks for full support</div>
-      <div class="stamp frag fade" data-step="2"><b>NOT SENT</b></div>
-      <p class="frag" data-step="2" style="margin-top:16px"><b class="red">31 July leaves twelve hours.</b> <span class="muted">Bargaining is already over. The offer cannot wait.</span></p>
+      <div class="kicker">To Austria · the cheque</div>
+      <div class="lead" style="font-size:32px">Punish Serbia. Not a free hand.</div>
+      <div class="shot">
+        <div class="frame" style="height:220px"><img src="assets/telegram.jpg" alt="" style="object-position:center"></div>
+        <div class="stamp cond frag fade" data-step="2"><b>SENT,<br>WITH CONDITIONS</b></div>
+      </div>
+      <div class="frag" data-step="2" style="margin-top:14px">
+        <p><b>Take no land. Halt in Belgrade.</b></p>
+        <p class="muted">Accept mediation. 31 July is too late for either half.</p>
+      </div>
     </div>
   </div>
   <div class="footer"><span>Clark, <i>The Sleepwalkers</i> · Otte, <i>July Crisis</i></span><span class="pg"></span></div>
@@ -286,29 +303,17 @@
 <!-- 4 ENTRY GAME + THREE CONCEPTS -->
 <section class="slide" data-section="Concept 1">
   <div class="kicker">One player · one mechanism · three concepts</div>
-  <h2>Pay the entrant before you commit</h2>
-  <div class="row" style="flex:1;align-items:center;gap:60px">
-    <svg class="tree" viewBox="40 40 720 480" style="width:700px;height:470px;flex:none">
-      <g class="frag fade" data-step="1">
-        <path class="edge grey" d="M150 280 L 400 120"/>
-        <rect class="node" x="400" y="80" width="300" height="80" rx="16"/><text x="550" y="130" text-anchor="middle" font-size="30">Entrant stays out</text>
-      </g>
-      <g class="frag fade" data-step="2">
-        <path class="edge red" d="M150 280 L 400 280"/>
-        <rect class="node red" x="400" y="240" width="300" height="80" rx="16"/><text x="550" y="290" text-anchor="middle" font-size="30" fill="#e0584a">Cheque → war</text>
-      </g>
-      <g class="frag fade" data-step="3">
-        <path class="edge gold" d="M150 280 L 400 440"/>
-        <rect class="node gold" x="400" y="400" width="300" height="80" rx="16"/><text x="550" y="450" text-anchor="middle" font-size="30" fill="#e2b45c">Paid → stays out</text>
-      </g>
-      <circle cx="150" cy="280" r="92" fill="#2b2520" stroke="#e2b45c" stroke-width="5"/>
-      <text x="150" y="290" text-anchor="middle" font-size="32">Germany</text>
-    </svg>
-    <div class="col" style="display:flex;flex-direction:column;gap:22px">
-      <div class="card frag" data-step="1" style="border-left:10px solid #6b6258"><div class="lead sm">1 · The entrant stays out</div><p class="soft">Russia does not come in. Only with a reason.</p></div>
-      <div class="card accent red frag" data-step="2"><div class="lead sm red">2 · The cheque, then war</div><p class="soft">What Berlin wrote on 5 July. A European war.</p></div>
-      <div class="card accent frag" data-step="3" style="background:#3a3222"><div class="lead sm gold">3 · Pay Russia not to play</div><p class="muted">Before 5 July. The cheque is never written.</p></div>
-    </div>
+  <h2>Only one cell is the war.</h2>
+  <div class="mx">
+    <div></div>
+    <div class="hd blank">Blank cheque</div>
+    <div class="hd ours">Conditional cheque<br>+ payment</div>
+    <div class="rl">Russia<br>enters</div>
+    <div class="cell war"><div class="frag" data-step="1"><b>The war that happened</b><small>5 July</small></div></div>
+    <div class="cell"><div class="frag" data-step="3"><b>Russia may still fight</b><small>A risk. The payment is not a lock.</small></div></div>
+    <div class="rl">Russia<br>stays out</div>
+    <div class="cell"><div class="frag" data-step="3"><b>No reason to stay out</b><small>Russia is not paid to wait.</small></div></div>
+    <div class="cell ours"><div class="frag" data-step="2"><b>Our offer</b><small>Before 5 July. Russia waits.</small></div></div>
   </div>
   <div class="row frag" data-step="4" style="gap:28px;margin-top:6px">
     <div class="card col accent" style="padding:18px 28px;background:#3a3222"><div class="kicker" style="margin-bottom:6px">Concept 1</div><div class="lead sm">Entry game</div><p class="muted">What Russia must be paid to stay out</p></div>
@@ -345,7 +350,7 @@
       <div class="badge gold frag fade" data-step="4" style="left:48.4%;top:29.6%">3</div>
     </div>
     <div class="story">
-      <div class="ev frag" data-step="1"><figure><img src="assets/faces/wilhelm.jpg" alt=""><div class="n">1</div><figcaption>Wilhelm II</figcaption></figure><div class="t"><b>Serbia alive. No land taken.</b><span>Written before 5 July. The Kaiser says it only on 28 July.</span></div></div>
+      <div class="ev frag" data-step="1"><figure><img src="assets/faces/wilhelm.jpg" alt=""><div class="n">1</div><figcaption>Wilhelm II</figcaption></figure><div class="t"><b>Serbia independent. No land taken.</b><span>Written before 5 July. The Kaiser says it only on 28 July.</span></div></div>
       <div class="ev blue frag" data-step="2"><figure><img class="sq" src="assets/bosphorus.jpg" alt=""><div class="n">2</div><figcaption>The Straits</figcaption></figure><div class="t"><b>The Straits stay open</b><span>Russia's grain leaves here. No German command.</span></div></div>
       <div class="ev green frag" data-step="3"><figure><img src="assets/faces/poincare.jpg" alt=""><div class="n">3</div><figcaption>Poincaré</figcaption></figure><div class="t"><b>France lends 500m francs a year</b><span>President of France · 1913</span></div></div>
       <div class="ev frag" data-step="4"><figure><img src="assets/faces/bethmann.jpg" alt=""><div class="n">=</div><figcaption>Bethmann Hollweg</figcaption></figure><div class="t"><b>Germany pays the same</b><span>500m francs a year, for five years</span></div></div>
@@ -418,7 +423,7 @@
     <div class="card accent green col" style="display:flex;flex-direction:column;align-items:center">
       <div class="person green" style="margin-bottom:22px"><img src="assets/faces/sazonov.jpg" alt=""><div><div class="who">Sazonov · Foreign minister</div><div class="role">If Russia is paid before 5 July</div></div></div>
       <div class="stack">
-        <div class="gain frag" data-step="3">Serbia alive</div>
+        <div class="gain frag" data-step="3">Serbia independent</div>
         <div class="gain frag" data-step="3">Straits safe</div>
         <div class="gain frag" data-step="3">Money every year</div>
       </div>
@@ -465,16 +470,16 @@
     </div>
     <div class="lead frag" data-step="2" style="margin-top:26px;text-align:center"><span class="red">If Russia attacks in year 2,</span> years 3 to 5 are never paid. <span class="muted" style="font-weight:400;font-size:30px">Tit-for-tat.</span></div>
     <div class="row frag" data-step="3" style="margin-top:30px;gap:30px">
-      <div class="card glass col" style="display:flex;align-items:center;gap:24px"><div class="frame" style="width:150px;height:150px;flex:none"><img src="assets/juliusturm.jpg" alt="" style="object-position:center 20%"></div><div><div class="lead sm">Gold already in the war chest</div><p class="muted">Juliusturm, Spandau: ≈ 205m marks. A start. The full year fits in the budget.</p></div></div>
-      <div class="card glass col" style="display:flex;align-items:center;gap:24px"><div class="person"><img src="assets/faces/bethmann.jpg" alt=""></div><div><div class="lead sm">The letter replaces the cheque</div><p class="muted">Sent before 5 July. Austria is refused a European war. Russia sees the letter.</p></div></div>
+      <div class="card glass col" style="display:flex;align-items:center;gap:24px"><div class="frame" style="width:150px;height:150px;flex:none"><img src="assets/juliusturm.jpg" alt="" style="object-position:center 20%"></div><div><div class="lead sm">Gold already in the war chest</div><p class="muted">Juliusturm, Spandau: 120m gold marks, kept there from 1874. A start. The rest of the year fits in the budget.</p></div></div>
+      <div class="card glass col" style="display:flex;align-items:center;gap:24px"><div class="person"><img src="assets/faces/bethmann.jpg" alt=""></div><div><div class="lead sm">The letter sets the conditions</div><p class="muted">Sent before 5 July. No land. Halt in Belgrade. Accept mediation. Russia sees the letter.</p></div></div>
     </div>
   </div>
-  <div class="footer"><span>Neitzel (war chest) · Photo: Spandau Citadel</span><span class="pg"></span></div>
+  <div class="footer"><span>Reichskriegsschatz: 120 million gold marks, Juliusturm, from 1874 · Photo: Spandau Citadel</span><span class="pg"></span></div>
 </section>
 
 <!-- 10 CHAIN -->
 <section class="slide" data-section="Concept 3">
-  <h2>The chain breaks at the cheque.</h2>
+  <h2>The blank cheque starts the chain.</h2>
   <div class="mapwrap">
     <div class="map">
       <img class="base" src="assets/map1914.jpg" alt="">
@@ -500,7 +505,7 @@
       <div class="ev red frag" data-step="2"><figure><img src="assets/faces/nicholas.jpg" alt=""><div class="n">2</div><figcaption>Nicholas II</figcaption></figure><div class="t"><b>Russia mobilises</b><span>Tsar of Russia · 30 July</span></div></div>
       <div class="ev red frag" data-step="3"><figure><img src="assets/faces/moltke.jpg" alt=""><div class="n">3</div><figcaption>Moltke</figcaption></figure><div class="t"><b>Germany marches through Belgium</b><span>German chief of staff</span></div></div>
       <div class="ev red frag" data-step="4"><figure><img src="assets/faces/grey.jpg" alt=""><div class="n">4</div><figcaption>Grey</figcaption></figure><div class="t"><b>Britain enters</b><span>British foreign secretary · Treaty of London, 1839</span></div></div>
-      <div class="ev hero frag" data-step="5"><div class="t"><b>The cheque is never written.</b><span>Russia is paid before 5 July. No mobilisation. No Belgium. No Britain.</span></div></div>
+      <div class="ev hero frag" data-step="5"><div class="t"><b>Write it with conditions. Pay Russia to wait.</b><span>Before 5 July. No free hand. No mobilisation. No Belgium. No Britain.</span></div></div>
     </div>
   </div>
   <div class="footer"><span>Ferguson, <i>The Pity of War</i> · Clark · Treaty of London, 1839</span><span class="pg"></span></div>
@@ -557,17 +562,18 @@
   <div class="photo dark" style="background-image:url(assets/belgrade.jpg)"></div><div class="shade"></div>
   <div class="over">
     <div class="kicker">Before the last word</div>
-    <h2>Four ways it fails.</h2>
-    <div class="row" style="flex:1;gap:28px;align-items:stretch">
-      <div class="card glass col frag" data-step="1" style="text-align:center;padding-top:36px;border-top:10px solid var(--red)"><div class="person lg v red"><img src="assets/faces/conrad.jpg" alt=""><div><div class="who">Conrad</div><div class="role">Austrian chief of staff</div></div></div><h3 style="margin-top:22px">Conrad demands the cheque</h3><p class="muted">Then Germany must really refuse it.</p></div>
-      <div class="card glass col frag" data-step="2" style="text-align:center;padding-top:36px;border-top:10px solid var(--red)"><div class="person lg v red"><img src="assets/faces/sazonov.jpg" alt=""><div><div class="who">Sazonov</div><div class="role">Russian foreign minister</div></div></div><h3 style="margin-top:22px">Russia fights anyway</h3><p class="muted">Germany refused a cheque, not a war.</p></div>
-      <div class="card glass col frag" data-step="3" style="text-align:center;padding-top:36px;border-top:10px solid var(--red)"><div class="person lg v red"><img src="assets/faces/moltke.jpg" alt=""><div><div class="who">Moltke</div><div class="role">German chief of staff</div></div></div><h3 style="margin-top:22px">Russia stays armed</h3><p class="muted">The payments stop if Russia attacks.</p></div>
-      <div class="card glass col frag" data-step="4" style="text-align:center;padding-top:36px;border-top:10px solid var(--red)"><div class="person lg v red"><img src="assets/faces/nicholas.jpg" alt=""><div><div class="who">Nicholas II</div><div class="role">Tsar of Russia</div></div></div><h3 style="margin-top:22px">Can't buy Russia out of France</h3><p class="muted">Björkö proved it. This offer does not try.</p></div>
+    <h2>Five ways it fails.</h2>
+    <div class="row" style="flex:1;gap:18px;align-items:stretch">
+      <div class="card glass col frag" data-step="1" style="text-align:center;padding:22px 14px 18px;border-top:10px solid var(--red)"><div class="person lg v red"><img src="assets/faces/conrad.jpg" alt=""><div><div class="who">Conrad</div><div class="role">Austrian chief of staff</div></div></div><h3 style="margin-top:16px;font-size:32px">Conrad wants it blank</h3><p class="muted">A private blank cheque undoes the conditions.</p></div>
+      <div class="card glass col frag" data-step="2" style="text-align:center;padding:22px 14px 18px;border-top:10px solid var(--red)"><div class="person lg v red"><img src="assets/faces/sazonov.jpg" alt=""><div><div class="who">Sazonov</div><div class="role">Russian foreign minister</div></div></div><h3 style="margin-top:16px;font-size:32px">Russia fights anyway</h3><p class="muted">A conditional cheque is not a lock on the army.</p></div>
+      <div class="card glass col frag" data-step="3" style="text-align:center;padding:22px 14px 18px;border-top:10px solid var(--red)"><div class="person lg v red"><img src="assets/faces/moltke.jpg" alt=""><div><div class="who">Moltke</div><div class="role">German chief of staff</div></div></div><h3 style="margin-top:16px;font-size:32px">Russia stays armed</h3><p class="muted">The payments stop if Russia attacks.</p></div>
+      <div class="card glass col frag" data-step="4" style="text-align:center;padding:22px 14px 18px;border-top:10px solid var(--red)"><div class="person lg v red"><img src="assets/faces/nicholas.jpg" alt=""><div><div class="who">Nicholas II</div><div class="role">Tsar of Russia</div></div></div><h3 style="margin-top:16px;font-size:32px">Can't buy Russia out of France</h3><p class="muted">Björkö proved it. This offer does not try.</p></div>
+      <div class="card glass col frag" data-step="5" style="text-align:center;padding:22px 14px 18px;border-top:10px solid var(--red)"><div class="person lg v red"><img src="assets/faces/poincare.jpg" alt=""><div><div class="who">Poincaré</div><div class="role">President of France</div></div></div><h3 style="margin-top:16px;font-size:32px">Russia tells Paris</h3><p class="muted">Call it Balkan stability. The Kaiser writes to the Tsar, in private.</p></div>
     </div>
   </div>
-  <div class="final frag fade" data-step="5">
+  <div class="final frag fade" data-step="6">
     <div class="kicker">Germany · before 5 July 1914</div>
-    <h1 style="font-size:96px">Pay Russia not to enter.<br><span class="gold">Leave 5 July unsigned.</span></h1>
+    <h1 style="font-size:72px">Write the cheque with conditions.<br><span class="gold">Pay Russia to wait.</span></h1>
     <p class="lead" style="margin-top:22px">Entry game · Reservation prices · Costly commitment</p>
   </div>
   <div class="footer" style="z-index:3"><span>Clark · Otte · MacMillan · Ferguson · Kokovtsov · Gottlieb · Siegel · Girault</span><span class="pg"></span></div>
