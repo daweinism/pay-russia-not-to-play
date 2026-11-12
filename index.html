@@ -175,8 +175,9 @@
   .inst.on .yr .blk{opacity:1;transform:none}
   .inst .yr:nth-child(2) .blk{transition-delay:.15s}.inst .yr:nth-child(3) .blk{transition-delay:.3s}.inst .yr:nth-child(4) .blk{transition-delay:.45s}.inst .yr:nth-child(5) .blk{transition-delay:.6s}
   .inst .yr .y{font:700 30px/1 var(--sans);margin-top:12px;color:var(--muted)}
+  .inst .yr .share{font:700 26px/1.2 var(--sans);margin-top:6px;color:var(--gold)}
   .inst.stop .yr:nth-child(n+3) .blk{background:#4a3b36;opacity:.35}
-  .inst.stop .yr:nth-child(n+3) .y{color:var(--red)}
+  .inst.stop .yr:nth-child(n+3) .y,.inst.stop .yr:nth-child(n+3) .share{color:var(--red)}
 
   .choose{display:flex;gap:28px;flex:1;min-height:0}
   .choose .pane{background:var(--card);border-radius:18px;padding:28px 32px;display:flex;flex-direction:column;min-width:0;position:relative}
@@ -443,7 +444,8 @@
       <div class="mid">Inside</div>
       <div class="z on"><div class="soft" style="font-size:26px">Germany's maximum</div><div class="lead sm">Anything cheaper than the war</div></div>
     </div>
-    <div class="barrow"><div class="lab">Our payment, five years</div><div class="track"><div class="bar" data-w="13.3"></div></div><div class="val">0.4 bn marks</div></div>
+    <div class="lead sm" style="margin:8px 0 4px">500 million francs over five years ≈ 0.4 billion marks. A franc was worth about 0.8 marks.</div>
+    <div class="barrow"><div class="lab">Our payment, five years</div><div class="track"><div class="bar" data-w="13.3"></div></div><div class="val">≈ 0.4 bn marks</div></div>
     <div class="barrow"><div class="lab">1913 defence levy, one year</div><div class="track"><div class="bar grey" data-w="33"></div></div><div class="val">≈ 1 bn marks</div></div>
     <div class="barrow"><div class="lab">National budget, one year</div><div class="track"><div class="bar grey" data-w="100"></div></div><div class="val">≈ 3 bn marks</div></div>
   </div>
@@ -461,16 +463,17 @@
   <div class="over">
     <div class="kicker">Concept 3 of 3 · costly commitment</div>
     <h2>Germany pays before Russia trusts it.</h2>
+    <div class="lead sm frag" data-step="1" style="text-align:center">The same 500 million francs, about 100 million francs a year.</div>
     <div class="inst frag" data-step="1" id="inst">
-      <div class="yr"><div class="blk">Paid on signature</div><div class="y">Year 1</div></div>
-      <div class="yr"><div class="blk"></div><div class="y">Year 2</div></div>
-      <div class="yr"><div class="blk"></div><div class="y">Year 3</div></div>
-      <div class="yr"><div class="blk"></div><div class="y">Year 4</div></div>
-      <div class="yr"><div class="blk"></div><div class="y">Year 5</div></div>
+      <div class="yr"><div class="blk">Paid on signature</div><div class="y">Year 1</div><div class="share">100m francs</div></div>
+      <div class="yr"><div class="blk"></div><div class="y">Year 2</div><div class="share">100m francs</div></div>
+      <div class="yr"><div class="blk"></div><div class="y">Year 3</div><div class="share">100m francs</div></div>
+      <div class="yr"><div class="blk"></div><div class="y">Year 4</div><div class="share">100m francs</div></div>
+      <div class="yr"><div class="blk"></div><div class="y">Year 5</div><div class="share">100m francs</div></div>
     </div>
     <div class="lead frag" data-step="2" style="margin-top:26px;text-align:center"><span class="red">If Russia attacks in year 2,</span> years 3 to 5 are never paid. <span class="muted" style="font-weight:400;font-size:30px">Tit-for-tat.</span></div>
     <div class="row frag" data-step="3" style="margin-top:30px;gap:30px">
-      <div class="card glass col" style="display:flex;align-items:center;gap:24px"><div class="frame" style="width:150px;height:150px;flex:none"><img src="assets/juliusturm.jpg" alt="" style="object-position:center 20%"></div><div><div class="lead sm">Gold already in the war chest</div><p class="muted">Juliusturm, Spandau: 120m gold marks, kept there from 1874. More than year one. The rest fits in the budget.</p></div></div>
+      <div class="card glass col" style="display:flex;align-items:center;gap:24px"><div class="frame" style="width:150px;height:150px;flex:none"><img src="assets/juliusturm.jpg" alt="" style="object-position:center 20%"></div><div><div class="lead sm">Gold already in the war chest</div><p class="muted">Juliusturm, Spandau: 120m gold marks, kept there from 1874. Year one is about 80 million marks, so the chest covers it. Later years fit in the budget.</p></div></div>
       <div class="card glass col" style="display:flex;align-items:center;gap:24px"><div class="person"><img src="assets/faces/bethmann.jpg" alt=""></div><div><div class="lead sm">The letter sets the conditions</div><p class="muted">No land. Halt in Belgrade. Accept mediation. Russia sees the letter.</p></div></div>
     </div>
   </div>
